@@ -1,0 +1,98 @@
+[
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d1" },
+            "categoria" : "geladeria",
+            "imagen" : "./img/Geladera1.png",
+            "descripcao" : "Geladeira Frost Free Brastemp Side Inverse  600 Litros",
+            "preco" : 10389.00,
+            "precoFinal" : 7019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d2" },
+            "categoria" : "geladeira",
+            "imagen" : "./img/Geladera2.png",
+            "descripcao" : "Geladeira Frost Free Brastemp Side Inverse  300 Litros",
+            "preco" : 4389.00,
+            "precoFinal" : 2019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d3" },
+            "categoria" : "geladeira",
+            "imagen" : "./img/Geladera3.png",
+            "descripcao" : "Geladeira Frost Free Brastemp Side Inverse  600 Litros",
+            "preco" : 10389.00,
+            "precoFinal" : 7019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d4" },
+            "categoria" : "fogao",
+            "imagen" : "./img/Fogon3.png",
+            "descripcao" : "Fogon de 4 bocas con mesa de madera mais um horno",
+            "preco" : 4389.00,
+            "precoFinal" : 2019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d5" },
+            "categoria" : "fogao",
+            "imagen" : "./img/Fogon2.png",
+            "descripcao" : "Fogao 4 bocas con mesa de vidrio Samsung",
+            "preco" : 8389.00,
+            "precoFinal" : 7019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d6" },
+            "categoria" : "microondas",
+            "imagen" : "./img/microondas.jpg",
+            "descripcao" : "Microondas Frost Free Brastemp Side Inverse  50 Litros",
+            "preco" : 2389.00,
+            "precoFinal" : 1019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d7" },
+            "categoria" : "microondas",
+            "imagen" : "./img/microndas2.png",
+            "descripcao" : "Microondas Frost Free Brastemp Side Inverse  40Litros",
+            "preco" : 3389.00,
+            "precoFinal" : 2019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d8" },
+            "categoria" : "microondas",
+            "imagen" : "./img/microndas3.png",
+            "descripcao" : "Microondas Frost Free Brastemp Side Inverse  30 Litros",
+            "preco" : 1389.00,
+            "precoFinal" : 1019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a815d9" },
+            "categoria" : "lavaRoupa",
+            "imagen" : "./img/Labadora.png",
+            "descripcao" : "Lavadora Frost Free Brastemp Side Inverse  150 Litros",
+            "preco" : 2389.00,
+            "precoFinal" : 1019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a81510" },
+            "categoria" : "lavaRoupa",
+            "imagen" : "./img/Labadora2.png",
+            "descripcao" : "Labadora Frost Free Brastemp Side Inverse  50Litros",
+            "preco" : 1389.00,
+            "precoFinal" : 900.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a81511" },
+            "categoria" : "lavaLouca",
+            "imagen" : "./img/lava.png",
+            "descripcao" : "Lava Louça Frost Free Brastemp Side Inverse  540Litros",
+            "preco" : 8389.00,
+            "precoFinal" : 3019.00
+        },
+        {
+            "_id" : { "$oid": "6016cf66937399e892a81512" },
+            "categoria" : "lavaLouca",
+            "imagen" : "./img/dishwasher.jpg",
+            "descripcao" : "Lava Louça Frost Free Brastemp Side Inverse  540Litros",
+            "preco" : 8389.00,
+            "precoFinal" : 3019.00
+        }
+]

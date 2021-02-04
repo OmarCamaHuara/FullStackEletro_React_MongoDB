@@ -1,0 +1,9 @@
+.filiais {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.filiais-box{
+    width: 33%;
+    background-image: url('');
+}
