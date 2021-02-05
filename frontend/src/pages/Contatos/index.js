@@ -9,7 +9,7 @@ const Contatos = () =>{
     const [alert, setAlert] = useState (false);
     const [comentarios, setComentarios] = useState([]);
     const [render, setRender] = useState(false);
-    const [msg , setMsg] = useState(false);
+    const [msg , setMsg] = useState("");
 
     useEffect(async () => {
         const url = "http://localhost:5000/mostrar";
@@ -90,14 +90,13 @@ const Contatos = () =>{
                     comentarios.map((element) => {
                         return (
                             
-                            <div key={element._id} className="card w-50 mx-auto mt-3">
+                            <div key={ element._id } className="card w-50 mx-auto mt-3">
                                 <div className="card-header">
-                                    {element.nome}
+                                    { element.nome }
                                 </div>
                                 <div className="card-body">
-                                    Mensaje: {element.msg}
+                                    Mensaje: { element.msg }
                                 </div>
-                                <h1>Omar</h1>
                             </div>
                         )
                     }).reverse()

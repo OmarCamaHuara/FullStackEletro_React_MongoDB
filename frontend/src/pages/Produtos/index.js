@@ -36,7 +36,7 @@ const Produtos = () => {
                             return(
                             <div className="col-3 my-2">
 
-                                <div key={row.idproduct} className="box_produto card border border-2" style={{width:"12rem"}} id={row.categoria}>
+                                <div key={row._id} className="box_produto card border border-2" style={{width:"12rem"}} id={row.categoria}>
                                     <img className="card-img-top" src={row.imagen} alt="imagem" img-fluid/>
                                     <br />
                                     <div className="card-body">

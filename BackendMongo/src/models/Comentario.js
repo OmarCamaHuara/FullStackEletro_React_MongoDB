@@ -4,11 +4,13 @@ const Schema = mongoose.Schema;
 const Comentario = new Schema({
     nome: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     msg:{
         type: String,
-        required: true
+        required: true,
+        trim: true
     }
 })
 
