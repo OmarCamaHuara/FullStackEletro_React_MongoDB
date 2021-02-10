@@ -19,24 +19,23 @@ const Contatos = () =>{
 
 
 
-    async function registerComent(event){
-        event.preventDefault();
-        let formData = new FormData(event.target);
+    // function registerComentarios(event){
+    //     event.preventDefault();
 
-        const url = "http://localhost:5000/comentarios";
+    //     const url ="http://localhost:5000/comentarios"
 
-        fetch(url, {
-            method: "POST",
-            body: formData
-        }).then((response) => response.json()).then((dados) => {
-            setRender(!render);
-            setMsg(dados);
-            setTimeout(() => {
-                setMsg(false);
-            }, 2000);
-        });
-    }
-
+    //     fetch(url, {
+        
+    //     }).then((response) => response.json()).then((dados) =>{
+    //         setRender (!render);
+    //         setMsg (dados);
+    //         setTimeout(() => {
+    //             setMsg(false);
+    //         },2000);
+    //     }); 
+    // }
+   
+    
 
     return (
     <div className="container mt-5">
@@ -58,16 +57,16 @@ const Contatos = () =>{
         
         <section className="formulario">
 
-            <form onSubmit={registerComent}>
+            <form action="http://localhost:5000/comentarios" method="POST">
 
                 <div className="form-group">
-                    <label for="exampleFormControlInput1">Nome:</label>
-                    <input type="text" className="form-control"  name="nome" id="exampleFormControlInput1" placeholder="Seu nome" />
+                    <label for="nome">Nome:</label>
+                    <input type="text" className="form-control"  name="nome" id="nome" placeholder="Seu nome" />
                 </div>
 
                 <div className="form-group">
-                    <label for="exampleFormControlTextarea1">Mensaje:</label>
-                    <textarea className="form-control" name="msg" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="msg">Mensaje:</label>
+                    <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
                 </div>
 
                 <button className="btn btn-primary btn-lg btn-block">Enviar</button>

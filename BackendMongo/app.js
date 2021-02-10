@@ -40,7 +40,7 @@ app.post('/comentarios', (req, res) => {
        msg: req.body.msg, 
     });
     novoComentario.save();
-    res.json({ message: "Cadastrado Ok", comentario:novoComentario });
+    res.redirect('http://localhost:3000/contatos');
 })
 
 app.listen(5000)
