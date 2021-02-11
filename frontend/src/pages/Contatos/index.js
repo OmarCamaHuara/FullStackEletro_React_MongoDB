@@ -10,6 +10,7 @@ const Contatos = () =>{
     const [comentarios, setComentarios] = useState([]);
     const [render, setRender] = useState(false);
     const [msg , setMsg] = useState("");
+    const [nome, setNome] = useState("")
 
     useEffect(async () => {
         const url = "http://localhost:5000/mostrar";
@@ -19,21 +20,33 @@ const Contatos = () =>{
 
 
 
-    // function registerComentarios(event){
-    //     event.preventDefault();
+    function registerComentarios(event){
+        event.preventDefault();
+        let formData = {
+            nome:nome,
+            msg:msg
+        }
 
-    //     const url ="http://localhost:5000/comentarios"
+        const url ="http://localhost:5000/comentarios"
 
-    //     fetch(url, {
-        
-    //     }).then((response) => response.json()).then((dados) =>{
-    //         setRender (!render);
-    //         setMsg (dados);
-    //         setTimeout(() => {
-    //             setMsg(false);
-    //         },2000);
-    //     }); 
-    // }
+        fetch(url, {
+            method: "POST",
+            headers: {'Content-Type':'application/json'}, //
+            body: JSON.stringify(formData) // 
+        }).then((response) => response.json()).then((data) =>{
+            if(data.error){
+                console.log(data.error) 
+                return
+            }
+            setRender (!render);
+            setAlert (data);
+            setTimeout(() => {
+                setAlert(false);
+            },2000);      
+        }); 
+        setNome("")
+        setMsg("")  
+    }
    
     
 
@@ -57,16 +70,16 @@ const Contatos = () =>{
         
         <section className="formulario">
 
-            <form action="http://localhost:5000/comentarios" method="POST">
+            <form onSubmit={registerComentarios}>
 
                 <div className="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" className="form-control"  name="nome" id="nome" placeholder="Seu nome" />
+                    <input type="text" className="form-control"  name="nome" value={nome} onChange={(event) => setNome(event.target.value)} id="nome" placeholder="Seu nome" />
                 </div>
 
                 <div className="form-group">
                     <label for="msg">Mensaje:</label>
-                    <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
+                    <textarea className="form-control" value={msg} onChange={(event) => setMsg(event.target.value)} name="msg" id="msg" rows="3"></textarea>
                 </div>
 
                 <button className="btn btn-primary btn-lg btn-block">Enviar</button>
@@ -76,7 +89,7 @@ const Contatos = () =>{
         </section>
 
 
-        { msg && <div className="alert alert-success mx-auto mt-4 w-75" role="alert">
+        { alert && <div className="alert alert-success mx-auto mt-4 w-75" role="alert">
             Cadastro efectuado com sucesso
         </div>
 

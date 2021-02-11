@@ -29,18 +29,16 @@ app.get('/produtos', async(req, res) => {
 
 app.get('/mostrar', async(req, res) => {
     const comentarioResponse = await Comentario.find();
-    const comentarioJson = await comentarioResponse;
-
-    return res.json(comentarioJson);
+    res.send(comentarioResponse);
 })
 
-app.post('/comentarios', (req, res) => {
+app.post('/comentarios', async(req, res) => {
     const novoComentario = new Comentario({
        nome: req.body.nome,
        msg: req.body.msg, 
     });
-    novoComentario.save();
-    res.redirect('http://localhost:3000/contatos');
+    const result = await novoComentario.save();
+    res.send(result);
 })
 
 app.listen(5000)
